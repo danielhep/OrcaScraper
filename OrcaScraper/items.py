@@ -21,3 +21,15 @@ class TransactionItem(Item):
     amount = Field(output_processor=convert_float)
     balance = Field(output_processor=convert_float)
     paymentMethod = Field(output_processor=strip_str)
+
+class RefactoredTransactionItem(Item):
+    sn = Field()
+    date = Field()
+    desc = Field()
+    location = Field()
+    route = Field()
+    agency = Field()
+    product = Field()
+    amount = Field()
+    balance = Field()
+    paymentMethod = Field()

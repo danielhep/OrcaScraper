@@ -73,7 +73,6 @@ class OrcaSpider(scrapy.Spider):
     def parse_activity(self, response):
         for option in response.css("#card-details option"):
             # Process each ORCA card on the account
-            logging.debug(self.startdate.month)
             yield scrapy.FormRequest.from_response(
                 response,
                 formdata={
