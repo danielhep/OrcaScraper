@@ -4,7 +4,7 @@ import scrapy
 import logging
 from scrapy.loader import ItemLoader
 import pendulum
-from items import TransactionItem
+from OrcaScraper.items import TransactionItem
 
 
 def authentication_failed(response):
