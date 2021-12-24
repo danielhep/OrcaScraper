@@ -34,7 +34,7 @@ class OrcaSpider(scrapy.Spider):
             raise Exception("No username or password provided.")
 
         if startdate == None:
-            self.startdate = pendulum.datetime(year, 1, 1, tz='America/Los_Angeles')
+            self.startdate = pendulum.datetime(int(year), 1, 1, tz='America/Los_Angeles')
         else:
             self.startdate = pendulum.parse(startdate, strict=False)
         if enddate == None:
@@ -43,10 +43,12 @@ class OrcaSpider(scrapy.Spider):
                 self.enddate = pendulum.today(tz='America/Los_Angeles')
             else:
                 # Otherwise use last day of the year
-                self.enddate = pendulum.datetime(year, 12, 31, tz="America/Los_Angeles")
+                self.enddate = pendulum.datetime(int(year), 12, 31, tz="America/Los_Angeles")
         else:
             self.enddate = pendulum.parse(enddate, strict=False)
 
+        logging.debug(f'Start date: {self.startdate}')
+        logging.debug(f'End date: {self.enddate}')
         self.username = username
         self.password = password
 
