@@ -2,4 +2,4 @@ OrcaScraper/__pycache__/__init__.cpython-310.pyc
 OrcaScraper/__pycache__/settings.cpython-310.pyc
 OrcaScraper/spiders/__pycache__/__init__.cpython-310.pyc
 OrcaScraper/spiders/__pycache__/orca.cpython-310.pyc
-out.json
+__pycache__/*
