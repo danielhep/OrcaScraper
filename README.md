@@ -26,3 +26,19 @@ Set `yourusername` and `yourpass` to your orcacard.com username and password.
 You may omit `pipenv run` by first running `pipenv shell` before your commands. 
 
 Output file can be changed by adjusting `out.json`. Supported file times are `csv`, `json`, and `xml`.
+
+
+### HTTP Server
+OrcaScraper can also be run as an HTTP server. Use the command
+
+```pipenv run server.py```
+
+Then make requests to 
+
+```/transactions?username=username&password=password```
+
+Optionally, the start and end date can be provided as well.
+
+```/transactions?username=username&password=password&start=20200301&end=20200829```
+
+Successful requests will return a JSON object with scraped transactions in the `transactions` key.
