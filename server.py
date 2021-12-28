@@ -21,7 +21,7 @@ class OrcaUserRequestHandler(BaseHTTPRequestHandler):
                 return
             start = query_params.get('start', ' ')[0].strip()
             end = query_params.get('end', ' ')[0].strip()
-            self.process(username, password, start, end)
+            self.process(username, password, start or None, end or None)
         except:
             self.send_error(500)
         
