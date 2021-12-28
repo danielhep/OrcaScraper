@@ -41,4 +41,4 @@ Optionally, the start and end date can be provided as well.
 
 ```/transactions?username=username&password=password&start=20200301&end=20200829```
 
-Successfull requests will return a JSON object with scraped transactions in the `transactions` key.
+Successful requests will return a JSON object with scraped transactions in the `transactions` key.
